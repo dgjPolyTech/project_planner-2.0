@@ -1,0 +1,432 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', 'Noto Sans KR', sans-serif;
+    background-color: #F0FDF4; /* 연한 민트/초록 바탕 */
+    color: #1F2937;
+}
+body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+    background-color: #86EFAC; /* 연한 연두 */
+    color: #065F46;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    height: 5.5%;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 메인 컨테이너 */
+.home_container {
+    display: flex;
+    height: 75%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    margin: 30px 0;
+}
+
+/* 좌측 메뉴 */
+.home_container_list {
+    background-color: #34D399; /* 민트 포인트 */
+    color: white;
+    width: 15%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.body_profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.body_profile_imgBox img {
+    width: 80%;
+    border-radius: 50%;
+    border: 2px solid #E5E7EB;
+    object-fit: cover;
+}
+
+.body_profile_info h2 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.menu_list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu_list a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit;        /* 부모(li)의 글자색 상속 */
+    display: block;        /* 전체 영역 클릭 가능하도록 */
+    width: 100%;
+    height: 100%;
+}
+
+.menu_list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #A7F3D0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu_list li:hover {
+    background-color: #10B981;
+}
+
+/* 콘텐츠 영역 */
+.home_container_contents {
+    width: 85%;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #ECFDF5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home_container_top,
+.home_container_bottom {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
+
+.home_today,
+.home_week,
+.home_habit,
+.home_diary {
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 오늘의 할 관련 */
+.today_body {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden; /* 오늘의 할 일 전체에서 넘치는 건 숨김 */
+}
+
+.today_list {
+    flex: 3;
+    height: calc(40px * 5); /* 각 항목 높이 × 6행 */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.today_list ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.today_list ol li {
+    width: 50%;
+    height: 45px; /* 정확한 행 높이 */
+    box-sizing: border-box;
+    padding-left: 8px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.today_list_input {
+    flex: 2; /* 영역 내 비율 */
+    padding: 10px;
+    border-radius: 10px; 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05); 
+    display: flex; 
+    flex-direction: column; /* 정렬 방향 */
+    gap: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.today_list_input h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.today_list_input hr {
+    margin: 4px 0;
+}
+
+.input_text {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.priority_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    flex-wrap: wrap; /* 모바일 대응 */
+    box-sizing: border-box;
+}
+
+.button_wrapper {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add_button {
+    padding: 8px 16px;
+    background-color: #10B981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.add_button:hover {
+    background-color: #059669;
+}
+
+/* 습관 관리 관련 */
+.habit_body {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden; /* 안 보이는 건 숨김 처리 */
+}
+
+.habit_list {
+    flex: 3;
+    height: calc(40px * 5); /* 각 항목 높이 × 6행 */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.habit_list ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.habit_list ol li {
+    width: 100%;
+    height: 45px; /* 정확한 행 높이 */
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding-left: 8px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.habit_list_input {
+    flex: 2;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.habit_list_input h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.habit_list_input hr {
+    margin: 4px 0;
+}
+
+.today_list_input {
+    flex: 2; /* 영역 내 비율 */
+    padding: 10px;
+    border-radius: 10px; 
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05); 
+    display: flex; 
+    flex-direction: column; /* 정렬 방향 */
+    gap: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.today_list_input h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.today_list_input hr {
+    margin: 4px 0;
+}
+
+/* 향후 일정 관련 */
+.week_body {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden; /* 안 보이는 건 숨김 처리 */
+}
+
+.week_list {
+    flex: 3;
+    height: calc(40px * 5); /* 각 항목 높이 × 6행 */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.week_list ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.week_list ol li {
+    width: 100%;
+    height: 45px; /* 정확한 행 높이 */
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding-left: 8px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.week_list_input {
+    flex: 2; /* 40% 비율 */
+    /* background-color: #F0FDF4; */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.week_list_input h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.week_list_input hr {
+    margin: 4px 0;
+}
+
+/* 다이어리 관련 */
+.diary_body {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden; /* 오늘의 할 일 전체에서 넘치는 건 숨김 */
+}
+
+.diary_body {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden; /* 안 보이는 건 숨김 처리 */
+}
+
+.diary_list {
+    flex: 3;
+    height: calc(40px * 5); /* 각 항목 높이 × 6행 */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.diary_list ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.diary_list ol li {
+    width: 50%;
+    height: 45px; /* 정확한 행 높이 */
+    box-sizing: border-box;
+    padding-left: 8px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.diary_list_input {
+    flex: 2;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.textarea_memo {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    line-height: 1.4;
+    font-family: 'Segoe UI', 'Noto Sans KR', sans-serif;
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #D1FAE5;
+    margin: 10px 0;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #D1FAE5;
+    color: #064E3B;
+    margin-top: 40px;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DODAY NOTE - 메인</title>
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1 class="home-title">DODAY NOTE</h1>
+    </div>
+  </header>
+
+  <div class="home_container">
+    <div class="home_container_list">
+      <div class="body_profile">
+        <div class="body_profile_imgBox">
+          <img src="imgs/basic2.png" />
+        </div>
+        <div class="body_profile_info">
+          <h2>000님, 환영합니다.</h2>
+        </div>
+      </div>
+      <ul class="menu_list">
+        <li><a href="home.html">홈</a></li>
+        <li><a href="ranking.html">통계</a></li>
+      </ul>
+    </div>
+
+    <div class="home_container_contents">
+      <div class="home_container_top">
+        <!-- 오늘의 할 일 -->
+        <div class="home_today">
+          <div class="today_title">
+            <p><span style="font-size: 1.25em; font-weight: bold;">오늘의 할 일</span> — 쉽고 간단하게 오늘의 일을 기록하고 관리하세요.</p>
+            <hr />
+          </div>
+          <div class="today_body">
+            <div class="today_list">
+              <ol>
+                <li style="font-weight: bold;">HTML 공부 ★★★</li>
+                <li style="font-weight: bold;">파이썬 공부 ★★★</li>
+                <li style="font-weight: bold;">자바 공부 ★★★</li>
+                <li>운동하기 ★★</li>
+                <li>장보기 ★★</li>
+                <li>청소하기 ★★</li>
+                <li>밥먹기 ★</li>
+                <li>숨쉬기 ★</li>
+                <li>잠자기 ★</li>
+              </ol>
+            </div>
+            <div class="today_list_input">
+              <h3>할 일 등록</h3>
+              <hr />
+              <input type="text" class="input_text" placeholder="할 일을 입력하세요" />
+              <div class="priority_group">
+                <span>중요도:</span>
+                <label><input type="radio" name="todo_priority" value="1" /> 1</label>
+                <label><input type="radio" name="todo_priority" value="2" /> 2</label>
+                <label><input type="radio" name="todo_priority" value="3" /> 3</label>
+              </div>
+              <div class="button_wrapper">
+                <button class="add_button">등록</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 습관 관리 -->
+        <div class="home_habit">
+          <div class="habit_title">
+            <p><span style="font-size: 1.25em; font-weight: bold;">습관 관리</span> — 지속적으로 실천할 습관을 등록해보세요.</p>
+            <hr />
+          </div>
+          <div class="habit_body">
+            <div class="habit_list">
+              <ol>
+                <li><span class="habit_list_title">하루 10분 달리기</span><span class="habit_list_date">D-3</span></li>
+                <li><span class="habit_list_title">C 예습하기</span><span class="habit_list_date">D-5</span></li>
+                <li><span class="habit_list_title">자바 복습하기</span><span class="habit_list_date">D-7</span></li>
+                <li><span class="habit_list_title">10시에 잠들기</span><span class="habit_list_date">D-9</span></li>
+              </ol>
+            </div>
+            <div class="habit_list_input">
+              <h3>습관 등록</h3>
+              <hr />
+              <input type="text" class="input_text" placeholder="습관명을 입력하세요" />
+              <input type="text" class="input_text" placeholder="기간 (예: 30일)" />
+              <div class="button_wrapper">
+                <button class="add_button">등록</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home_container_bottom">
+        <!-- 향후 일정 -->
+        <div class="home_week">
+          <div class="week_title">
+            <p><span style="font-size: 1.25em; font-weight: bold;">향후 일정</span> — 향후에 있을 일정을 미리 등록하여 관리하세요.</p>
+            <hr />
+          </div>
+          <div class="week_body">
+            <div class="week_list">
+              <ol>
+                <li><span class="week_list_title">여행</span><span class="week_list_date">D-3</span></li>
+                <li><span class="week_list_title">자격증 시험</span><span class="week_list_date">D-7</span></li>
+                <li><span class="week_list_title">결혼식 참석</span><span class="week_list_date">D-14</span></li>
+                <li><span class="week_list_title">영화 보러가기</span><span class="week_list_date">D-30</span></li>
+              </ol>
+            </div>
+            <div class="week_list_input">
+              <h3>일정 등록</h3>
+              <hr />
+              <input type="text" class="input_text" placeholder="일정명을 입력하세요" />
+              <div class="date_select_group">
+                <select class="date_select"><option>2025</option></select>년
+                <select class="date_select"><option>05</option></select>월
+                <select class="date_select"><option>30</option></select>일
+              </div>
+              <div class="priority_group">
+                <span>중요도:</span>
+                <label><input type="radio" name="week_priority" value="1" /> 1</label>
+                <label><input type="radio" name="week_priority" value="2" /> 2</label>
+                <label><input type="radio" name="week_priority" value="3" /> 3</label>
+              </div>
+              <div class="button_wrapper">
+                <button class="add_button">등록</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 다이어리 -->
+        <div class="home_diary">
+          <div class="diary_title">
+            <p><span style="font-size: 1.25em; font-weight: bold;">다이어리</span> — 메모하고 싶은 것을 기록하세요.</p>
+            <hr />
+          </div>
+          <div class="diary_body">
+            <div class="diary_list">
+              <ol>
+                <li>장보기 목록</li>
+                <li>떡볶이 레시피</li>
+                <li>자바 환경 설정</li>
+                <li>유용한 기능 정리</li>
+                <li>여행 계획</li>
+              </ol>
+            </div>
+            <div class="diary_list_input">
+              <input type="text" class="input_text" placeholder="제목을 입력하세요" />
+              <textarea class="textarea_memo" placeholder="메모 내용을 입력하세요"></textarea>
+              <div class="button_wrapper">
+                <button class="add_button">등록</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Copyright
+  </footer>
+</body>
+</html>
