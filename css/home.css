@@ -1,11 +1,64 @@
-.html, body {
-
+html, body{
+  width: 100%;
+  height: 100%;
 }
 
-.header {
-
+.home_main {
+  width: 97.5%;
+  height: 95%;
+  display: flex; /* 자식 요소들을 가로(기본, row)/세로(column)로 정렬하는 속성이다. */
+  flex-direction: row; 
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
-.footer {
-    
+.home_main_list {
+  width: 10%;
+  height: 100%;
+  border: 2px solid black;
+}
+
+.home_contents {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.home_contents1 {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.home_contents1_today {
+  width: 30%;
+}
+
+.home_contents1_week {
+  width: 30%;
+}
+
+.home_contents1_quick {
+  width: 30%;
+}
+
+.home_contents2 {
+  height: 45%;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.home_contents2_schedule {
+  width: 45%;
+}
+
+.home_contents2_habit {
+  width: 45%;
 }
